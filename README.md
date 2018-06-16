@@ -38,6 +38,7 @@ access_rules:
   mod_filter_iq:
     - allow: all
 ```
+
 Then modify those ACCESS rules to your needs. You can see examples below.
 Recompile and restart ejabberd.
 
@@ -57,12 +58,12 @@ access_rules:
     - restrict_local: local
     - restrict_foreign: all
 
-# Local non-admin users can only send messages to other local users.
+  # Local non-admin users can only send messages to other local users.
   restrict_local:
     - allow: local
     - deny: all
 
-# Foreign users can only send messages to admins.
+  # Foreign users can only send messages to admins.
   restrict_foreign:
     - allow: admin
     - deny: all
@@ -202,7 +203,7 @@ access_rules:
 This server has three virtual hosts. The first and second are not able
 to communicate between them. The admins do not have such restriction.
 
-```
+``` yml
 hosts:
   - "domain1.localhost"
   - "domain2.localhost"
