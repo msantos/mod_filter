@@ -76,7 +76,7 @@ with themselves, so that particular vhost will have no connection to the
 exterior. The other vhosts on the server are completely unrestricted. The
 administrators are also unrestricted.
 
-```
+``` yml
 # This ejabberd server has three virtual hosts
 hosts:
   - "example1.org"
