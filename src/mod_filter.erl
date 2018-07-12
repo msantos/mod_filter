@@ -16,8 +16,6 @@
 	 filter_packet/1, depends/2, mod_opt_type/1, mod_options/1]).
 
 -include("xmpp.hrl").
--include("ejabberd.hrl").
--include("logger.hrl").
 
 start(_Host, _Opts) ->
     ejabberd_hooks:add(filter_packet, global, ?MODULE, filter_packet, 100).
